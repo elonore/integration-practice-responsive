@@ -131,7 +131,7 @@ header {
     max-width: 600px;
     margin: 30px auto;
   }
-  
+
   .textarea {
     grid-area: texta;
   }
@@ -169,3 +169,75 @@ textarea {
         FOOTER
 ********************************************************/
 
+footer {
+    padding: 70px 0 90px;
+    position: relative;
+}
+
+footer:before {
+    content: "";
+    position: absolute;
+    width: 90%;
+    height: 1px;
+    background: rgba(0, 0, 0, 0.082);
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0;
+}
+
+footer ul {
+    display: flex;
+    justify-content: space-between;
+    width: 33%;
+    min-width: 300px;
+    margin: 0 auto;
+}
+
+footer a {
+    border: 1px solid #ccc;
+    border-radius: 50px;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s;
+}
+
+/*************************************************************
+        RESPONSIVE
+********************************************************/
+
+@media screen and (max-width: 650px) {
+    header,
+    .section-1,
+    .section-2 {
+        display: block;
+    }
+
+    header {
+        height: auto;
+    }
+
+    header .img-banner {
+        height: 50vh;
+        margin-top: 30px;
+    }
+
+    .container {
+        padding: 15px;
+    }
+
+    footer ul {
+        min-width: 200px;
+    }
+
+    footer a {
+        width: 30px;
+        height: 30px;
+    }
+
+    footer i {
+        font-size: 0.7rem;
+    }
+}
